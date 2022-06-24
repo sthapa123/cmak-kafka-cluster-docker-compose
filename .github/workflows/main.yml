@@ -35,6 +35,7 @@ jobs:
       
       # Runs a set of commands using the runners shell
       - uses: docker-practice/actions-setup-docker@master
-        
+      - name: add executible permission
+        run: chmod u+r+x test.sh
       - name: run test multiple 6
         run: ./test.sh cmak-zk-multiple-kafka-multiple.yml 6
